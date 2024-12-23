@@ -21,10 +21,21 @@ const PetDetails = ({ pets }) => {
 			{pet ? (
 				<>
 					<h1 className="text-3xl font-extrabold">Pet Details</h1>
-					<section className="w-fit mt-6 flex flex-col gap-2">
-						<h2 className="text-2xl font-semibold">{pet.name}</h2>
-						<p className="">{pet.breed}</p>
-						<p className="">{pet.age} years old</p>
+					<section className="w-fit mt-6 grid grid-cols-2 gap-2">
+						<div className="col-span-1">
+							<h2 className="text-2xl font-semibold">{pet.name}</h2>
+							<p className="">{pet.breed}</p>
+							<p className="">{pet.age} years old</p>
+						</div>
+						<div className="col-span-1">
+							{pet.image ? (
+								<img
+									src={pet.image}
+									alt={pet.name}
+									className="rounded-2xl w-80"
+								/>
+							) : null}
+						</div>
 					</section>
 				</>
 			) : null}

@@ -30,7 +30,10 @@ const App = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/pets" element={<PetList pets={pets} />} />
 					<Route path="/pets/:id" element={<PetDetails pets={pets} />} />
-					<Route path="/new" element={<PetForm />} />
+					<Route
+						path="/new"
+						element={<PetForm pets={pets} setPets={setPets} />}
+					/>
 				</Routes>
 			</main>
 		</>
