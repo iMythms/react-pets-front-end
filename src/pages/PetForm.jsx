@@ -27,39 +27,41 @@ const PetForm = ({ pets, setPets }) => {
 	return (
 		<div className="mt-16">
 			<h1 className="text-3xl font-extrabold">New Pet</h1>
-			<form onSubmit={handleSubmit} className="flex flex-col gap-2 w-64 mt-8">
-				<div className="flex flex-col gap-1">
-					<label htmlFor="name">Name</label>
-					<input
-						type="text"
-						name="name"
-						id="name"
-						onChange={handleChange}
-						value={formValues.name}
-						className="border px-1 rounded-md"
-					/>
-				</div>
-				<div className="flex flex-col gap-1">
-					<label htmlFor="breed">Breed</label>
-					<input
-						type="text"
-						name="breed"
-						id="breed"
-						onChange={handleChange}
-						value={formValues.breed}
-						className="border px-1 rounded-md"
-					/>
-				</div>
-				<div className="flex flex-col gap-1">
-					<label htmlFor="age">Age</label>
-					<input
-						type="text"
-						name="age"
-						id="age"
-						onChange={handleChange}
-						value={formValues.age}
-						className="border px-1 rounded-md"
-					/>
+			<form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full mt-8">
+				<div className="flex gap-5">
+					<div className="flex flex-col gap-1 w-full">
+						<label htmlFor="name">Name</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							onChange={handleChange}
+							value={formValues.name}
+							className="border p-1 rounded-md"
+						/>
+					</div>
+					<div className="flex flex-col gap-1 w-full">
+						<label htmlFor="breed">Breed</label>
+						<input
+							type="text"
+							name="breed"
+							id="breed"
+							onChange={handleChange}
+							value={formValues.breed}
+							className="border p-1 rounded-md"
+						/>
+					</div>
+					<div className="flex flex-col gap-1 w-full">
+						<label htmlFor="age">Age</label>
+						<input
+							type="text"
+							name="age"
+							id="age"
+							onChange={handleChange}
+							value={formValues.age}
+							className="border p-1 rounded-md"
+						/>
+					</div>
 				</div>
 				<div className="flex flex-col gap-1">
 					<label htmlFor="image">Image URL</label>
@@ -69,10 +71,10 @@ const PetForm = ({ pets, setPets }) => {
 						id="image"
 						onChange={handleChange}
 						value={formValues.image}
-						className="border px-1 rounded-md"
+						className="border p-1 rounded-md"
 					/>
 				</div>
-				<button className="bg-[#121212] text-white px-4 py-0.5 rounded-md hover:bg-zinc-700">
+				<button className="bg-[#121212] text-white mt-4 px-4 py-1 rounded-md hover:bg-zinc-700">
 					Submit
 				</button>
 			</form>

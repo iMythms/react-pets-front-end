@@ -7,6 +7,7 @@ import Home from './pages/home'
 import PetList from './pages/PetList'
 import PetDetails from './pages/PetDetails'
 import PetForm from './pages/PetForm'
+import PetUpdateForm from './pages/PetUpdateForm'
 import './App.css'
 
 const App = () => {
@@ -33,6 +34,10 @@ const App = () => {
 					<Route
 						path="/new"
 						element={<PetForm pets={pets} setPets={setPets} />}
+					/>
+					<Route
+						path="/update/:id"
+						element={<PetUpdateForm pets={pets} setPets={setPets} />}
 					/>
 				</Routes>
 			</main>
